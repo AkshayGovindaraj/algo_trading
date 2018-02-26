@@ -11,7 +11,7 @@ Created on Sun Feb 25 01:44:30 2018
 from bittrex_api import btrx_getusdt_mrktsummary
 from matplotlib import pyplot as plt
 
-def vol_graph():
+def vol_graph():                    #THrough Bittrex API
     usdt = btrx_getusdt_mrktsummary()
     ccy_list = []
     vol_list = []
