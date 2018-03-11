@@ -5,7 +5,7 @@ Created on Sun Feb 18 01:53:20 2018
 @author: Akshay Govindaraj
 """
 
-### This file fetches JSON requests
+# This file fetches JSON requests
 
 import requests
 import json
@@ -27,14 +27,12 @@ today = datetime.datetime.today()
 date_list = []
 for i in range(0,n_days):
     date_list.append(today - datetime.timedelta(days = (n_days-i+1) ))
-    
+
 # Getting the price in a list
 btc_price = []
-for i in range(0,n_days):
+for i in range(0,n_days-1):
     btc_price.append(btc_hist_list[date_list[i].strftime('%Y-%m-%d')])
-    
+
 #Plotting BTC price chart
 plt.plot(date_list, btc_price)
 plt.show()
-
-
