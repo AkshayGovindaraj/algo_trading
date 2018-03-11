@@ -21,6 +21,7 @@ print("Current Litecoin Price is " + str(round(ltcusd['rate'],3)) + " USD")
 # Plotting BTC price on Bitstamp for past 100 days
 
 ts_btc = CA_fetchdata(symbol='BITTREX_SPOT_NEO_USDT', period = '1DAY')
+ts_btc = CA_fetchdata(symbol='BITTREX_SPOT_BTC_USDT', period = '1HRS')
 date_list = []
 price_list = []
 for i in range(0, len(ts_btc)-1):
